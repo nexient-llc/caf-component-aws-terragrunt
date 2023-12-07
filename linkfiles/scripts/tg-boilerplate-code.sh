@@ -65,8 +65,8 @@ create_hcl_file "$inputs_file" "$content"
 
 # Create subdirectories under the 'env' directory
 if [ ! -d "$ENV_DIR" ]; then
-    echo "Directory '$ENV_DIR' not found."
-    exit 1
+    echo "Directory '$ENV_DIR' not found. Creating the env directory."
+    mkdir -p "$ENV_DIR"
 fi
 
 # Iterate through environments
